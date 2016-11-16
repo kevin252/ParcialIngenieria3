@@ -9,8 +9,69 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+        <script src="js/jquery/jquery.js" type="text/javascript"></script>
+        <link href="js/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/firebase.js" type="text/javascript"></script>
+       
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBgI3niSSgyp4aLzWDzS2Tv499Gy79TjUw",
+    authDomain: "parciaing.firebaseapp.com",
+    databaseURL: "https://parciaing.firebaseio.com",
+    storageBucket: "parciaing.appspot.com",
+    messagingSenderId: "31553100271"
+  };
+  firebase.initializeApp(config);
+</script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="container">
+            <!-- header -->
+            <header>
+
+                <h1>WARCARD</h1>
+            </header>
+            <h4>WarCard es un juego Free to Play de cartas en realidad aumentada. Existen dos modos de juego: 1vs1 y 2vs2. A la hora de la batalla cuando un jugador selecciona una carta, en el campo aparecera una representacion del personaje de la carta en realidad aumentada, en el cliente del juego se podran agregar amigos, invitar amigos comprar cartas y comprar apariencias a las cartas. Existen dos monedas en el juego, una se gana jugando partidas, la otra moneda se consigue con dinero de verdad, los skins para las cartas se consiguen con la moneda que se compra con dinero real.</h4>
+            <!-- container http://getbootstrap.com/css/#grid -->
+            <div class="container">
+
+                <form>
+                    <div class="form-group">
+                        <label>Usuario</label>
+                        <input type="text" id="txtusuario" class="form-control" placeholder="Usuario">
+                    </div>
+                    <div class="form-group">
+                        <label>Comentario</label>
+                        <textarea  id="txtcomentario" class="form-control" placeholder="Comentario"></textarea>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Calificacion</label>
+                        <input type="text" id="txtcalificacion" class="form-control" placeholder="Calificacion">
+                    </div>
+                    <button id="btnGuardar" name="btnGuardar" class="btn btn-default">Guardar</button>
+                </form>
+
+                <br />
+
+                <table id="mitabla" class="table table-hover">
+
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Comentario</th>
+                        <th>Calificacion</th>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <!-- [INICIO] pie de pagina -->
+                
+            <!-- [FIN] de pagina -->
+        </div>
     </body>
 </html>
